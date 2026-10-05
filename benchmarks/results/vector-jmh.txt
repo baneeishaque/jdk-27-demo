@@ -1,0 +1,5 @@
+Benchmark                     (size)  Mode  Cnt   Score   Error  Units
+VectorDotBenchmark.scalarDot    1024  avgt    6   0.857 ± 0.009  us/op
+VectorDotBenchmark.scalarDot   65536  avgt    6  59.146 ± 1.229  us/op
+VectorDotBenchmark.vectorDot    1024  avgt    6   0.216 ± 0.005  us/op
+VectorDotBenchmark.vectorDot   65536  avgt    6  14.797 ± 0.227  us/op
