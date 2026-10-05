@@ -1,0 +1,19 @@
+{
+  "name": "jdk-27-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Node tooling for the JDK 27 demo: the Playwright-based slide renderer of the multilingual YouTube kit.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "markdownlint": "markdownlint-cli2 \"**/*.md\"",
+    "markdownlint:fix": "markdownlint-cli2 --fix \"**/*.md\"",
+    "render-slides": "node content/youtube/render-slides.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "markdownlint-cli2": "0.23.3"
+  }
+}
