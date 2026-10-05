@@ -1,0 +1,40 @@
+WEBVTT
+
+00:00:00.400 --> 00:00:12.623
+JDK 27 membawa sembilan JEP. Saya membuat demo yang bisa dijalankan, sebuah tes, dan sebuah benchmark untuk masing-masingnya. Inilah yang mereka ukur.
+
+00:00:14.423 --> 00:00:26.382
+Collector G1 kini menjadi default ergonomis di setiap lingkungan — bahkan pada satu CPU. Tidak ada lagi perubahan collector yang mengejutkan di container kecil.
+
+00:00:28.182 --> 00:00:39.381
+Object header menyusut dari sembilan puluh enam bit menjadi enam puluh empat. Record dengan dua int kini mengalokasikan enam belas byte, bukan dua puluh empat.
+
+00:00:41.181 --> 00:00:57.291
+X25519MLKEM768 kini menjadi grup pertukaran kunci TLS 1.3 yang paling diutamakan — handshake tahan kuantum tanpa konfigurasi apa pun.
+
+00:00:59.091 --> 00:01:09.584
+JDK 27 menyunting nilai sensitif di dalam JVM. Kata sandi yang terekam dalam startup event tidak pernah mencapai file rekaman.
+
+00:01:11.384 --> 00:01:23.778
+LazyConstant menggantikan idiom holder-class. Komputasi terjadi paling banyak sekali — dan kegagalan bersifat permanen, jadi percobaan ulang harus ada di dalam supplier.
+
+00:01:25.578 --> 00:01:36.372
+Pattern primitif hanya mengonversi bila konversinya eksak. Empat puluh dua masuk ke kasus int, lima miliar jatuh ke long, dan nol koma satu ke double.
+
+00:01:38.172 --> 00:01:49.602
+Satu scope per permintaan, satu fork per panggilan jarak jauh. Scope adalah batas pembatalan — saat ada yang gagal, saudara-saudaranya dibatalkan.
+
+00:01:51.402 --> 00:02:06.560
+Empat pesanan melalui tiga panggilan layanan: lima ratus tujuh puluh milidetik secara sekuensial, dua ratus lima puluh delapan secara terstruktur — sekitar dua koma dua kali lebih cepat, dengan hasil identik.
+
+00:02:08.360 --> 00:02:18.203
+Dot product dengan Vector API berjalan sekitar empat kali lebih cepat daripada loop skalar, mengikuti empat lane SIMD hampir persis.
+
+00:02:20.003 --> 00:02:29.257
+PEM API mengodekan kunci dalam satu baris — termasuk enkripsi — dan menghapus semua pembungkus base64 buatan sendiri.
+
+00:02:31.057 --> 00:02:41.512
+Sembilan JEP, tiga puluh tiga tes, benchmark nyata pada JDK 27 build tiga puluh lima. Semua kode dan angka ada di repositori.
+
+00:02:43.312 --> 00:02:51.890
+Clone repositori, jalankan tes, dan reproduksi setiap angka di perangkat Anda sendiri. Terima kasih telah menonton.

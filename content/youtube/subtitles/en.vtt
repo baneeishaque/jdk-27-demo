@@ -1,0 +1,40 @@
+WEBVTT
+
+00:00:00.400 --> 00:00:08.272
+JDK 27 shipped nine JEPs. I built a runnable demo, a test, and a benchmark for every single one. Here is what they measure.
+
+00:00:10.072 --> 00:00:17.964
+The G1 collector is now the ergonomic default in every environment — even on a single CPU. No more surprise collector changes in small containers.
+
+00:00:19.764 --> 00:00:26.224
+Object headers shrank from ninety-six bits to sixty-four. A two-int record now allocates sixteen bytes instead of twenty-four.
+
+00:00:28.024 --> 00:00:36.737
+X25519MLKEM768 is now the most preferred TLS 1.3 key exchange group — quantum-resistant handshakes with zero configuration.
+
+00:00:38.537 --> 00:00:46.077
+JDK 27 redacts sensitive values inside the JVM. A password recorded in a startup event never reaches the recording file.
+
+00:00:47.877 --> 00:00:56.115
+Lazy constant replaces the holder-class idiom. Computation happens at most once — and failure is permanent, so retries belong inside the supplier.
+
+00:00:57.915 --> 00:01:06.304
+Primitive patterns convert only when the conversion is exact. Forty-two takes the int case, five billion falls to long, and zero point one to double.
+
+00:01:08.104 --> 00:01:15.518
+One scope per request, one fork per remote call. The scope is the cancellation boundary — when anything fails, its siblings are cancelled.
+
+00:01:17.318 --> 00:01:26.459
+Four orders through three service calls: five hundred seventy milliseconds sequential, two hundred fifty-eight structured — about two point two times faster, with identical results.
+
+00:01:28.259 --> 00:01:35.244
+A dot product with the Vector API runs about four times faster than the scalar loop, tracking the four SIMD lanes almost exactly.
+
+00:01:37.044 --> 00:01:42.844
+The PEM API encodes keys in one line — including encryption — and deletes every hand-rolled base64 wrapper.
+
+00:01:44.644 --> 00:01:52.397
+Nine JEPs, thirty-three tests, real benchmarks on JDK 27 build thirty-five. All code and numbers are in the repository.
+
+00:01:54.197 --> 00:02:00.468
+Clone the repository, run the tests, and reproduce every number on your own hardware. Thanks for watching.

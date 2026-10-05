@@ -1,0 +1,40 @@
+WEBVTT
+
+00:00:00.400 --> 00:00:10.685
+O JDK 27 trouxe nove JEPs. Criei uma demo executável, um teste e um benchmark para cada uma. Veja o que elas medem.
+
+00:00:12.485 --> 00:00:23.338
+O coletor G1 agora é o padrão ergonômico em todos os ambientes — até em uma única CPU. Chega de mudanças surpresa de coletor em contêineres pequenos.
+
+00:00:25.138 --> 00:00:36.514
+Os cabeçalhos de objeto encolheram de noventa e seis bits para sessenta e quatro. Um record com dois int agora aloca dezesseis bytes em vez de vinte e quatro.
+
+00:00:38.314 --> 00:00:53.106
+X25519MLKEM768 agora é o grupo de troca de chaves TLS 1.3 mais preferido — handshakes resistentes a quantum sem nenhuma configuração.
+
+00:00:54.906 --> 00:01:06.166
+O JDK 27 oculta valores sensíveis dentro da JVM. Uma senha registrada em um evento de inicialização nunca chega ao arquivo de gravação.
+
+00:01:07.966 --> 00:01:20.026
+Lazy constant substitui o idioma da classe holder. O cálculo acontece no máximo uma vez — e a falha é permanente, então as tentativas devem ficar dentro do supplier.
+
+00:01:21.826 --> 00:01:32.696
+Padrões primitivos convertem apenas quando a conversão é exata. Quarenta e dois entra no caso int, cinco bilhões caem no long, e zero vírgula um no double.
+
+00:01:34.496 --> 00:01:44.838
+Um scope por requisição, um fork por chamada remota. O scope é a fronteira de cancelamento — quando algo falha, seus irmãos são cancelados.
+
+00:01:46.638 --> 00:02:01.064
+Quatro pedidos em três chamadas de serviço: quinhentos e setenta milissegundos sequencial, duzentos e cinquenta e oito estruturado — cerca de duas vírgula duas vezes mais rápido, com resultados idênticos.
+
+00:02:02.864 --> 00:02:13.718
+Um produto escalar com a Vector API roda cerca de quatro vezes mais rápido que o loop escalar, acompanhando quase exatamente as quatro lanes SIMD.
+
+00:02:15.518 --> 00:02:23.913
+A PEM API codifica chaves em uma linha — incluindo criptografia — e elimina todo wrapper base64 feito à mão.
+
+00:02:25.713 --> 00:02:36.682
+Nove JEPs, trinta e três testes, benchmarks reais no JDK 27 build trinta e cinco. Todo o código e os números estão no repositório.
+
+00:02:38.482 --> 00:02:45.873
+Clone o repositório, rode os testes e reproduza cada número no seu próprio hardware. Obrigado por assistir.

@@ -1,0 +1,51 @@
+1
+00:00:00,400 --> 00:00:08,722
+JDK 27 ha introdotto nove JEP. Per ognuna ho creato una demo eseguibile, un test e un benchmark. Ecco cosa misurano.
+
+2
+00:00:10,522 --> 00:00:19,365
+Il collector G1 è ora il default ergonomico in ogni ambiente, anche su una singola CPU. Niente più cambi di collector a sorpresa nei piccoli container.
+
+3
+00:00:21,165 --> 00:00:29,462
+Gli header degli oggetti sono passati da novantasei bit a sessantaquattro. Un record con due int ora occupa sedici byte invece di ventiquattro.
+
+4
+00:00:31,262 --> 00:00:44,181
+X25519MLKEM768 è ora il gruppo di scambio di chiavi TLS 1.3 preferito — handshake resistenti al quantum senza alcuna configurazione.
+
+5
+00:00:45,981 --> 00:00:55,278
+JDK 27 oscura i valori sensibili dentro la JVM. Una password registrata in un evento di avvio non raggiunge mai il file di registrazione.
+
+6
+00:00:57,078 --> 00:01:07,536
+Lazy constant sostituisce l'idioma della holder class. Il calcolo avviene al massimo una volta — e il fallimento è permanente, quindi i tentativi successivi vanno dentro il supplier.
+
+7
+00:01:09,336 --> 00:01:18,749
+I pattern primitivi convertono solo quando la conversione è esatta. Quarantadue prende il caso int, cinque miliardi va su long, e zero virgola uno su double.
+
+8
+00:01:20,549 --> 00:01:30,113
+Uno scope per richiesta, un fork per chiamata remota. Lo scope è il confine di cancellazione — quando qualcosa fallisce, i suoi fratelli vengono cancellati.
+
+9
+00:01:31,913 --> 00:01:44,452
+Quattro ordini attraverso tre chiamate di servizio: cinquecentosettanta millisecondi in sequenza, duecentocinquantotto in modo strutturato — circa due virgola due volte più veloce, con risultati identici.
+
+10
+00:01:46,252 --> 00:01:54,609
+Un prodotto scalare con la Vector API è circa quattro volte più veloce del ciclo scalare, seguendo quasi esattamente le quattro lane SIMD.
+
+11
+00:01:56,409 --> 00:02:03,883
+La PEM API codifica le chiavi in una sola riga — anche la crittografia — ed elimina ogni wrapper base64 fatto a mano.
+
+12
+00:02:05,683 --> 00:02:14,434
+Nove JEP, trentatré test, benchmark reali su JDK 27 build trentacinque. Tutto il codice e i numeri sono nel repository.
+
+13
+00:02:16,234 --> 00:02:21,996
+Clona il repository, esegui i test e riproduci ogni numero sul tuo hardware. Grazie per la visione.

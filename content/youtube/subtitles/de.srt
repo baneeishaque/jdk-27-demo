@@ -1,0 +1,51 @@
+1
+00:00:00,400 --> 00:00:10,835
+JDK 27 brachte neun JEPs. Ich habe für jedes einzelne eine lauffähige Demo, einen Test und einen Benchmark gebaut. Hier ist, was sie messen.
+
+2
+00:00:12,635 --> 00:00:23,754
+Der G1-Collector ist jetzt in jeder Umgebung der ergonomische Standard — sogar auf einer einzigen CPU. Keine überraschenden Collector-Wechsel mehr in kleinen Containern.
+
+3
+00:00:25,554 --> 00:00:34,390
+Objekt-Header schrumpften von sechsundneunzig Bit auf vierundsechzig. Ein Record mit zwei int belegt jetzt sechzehn Bytes statt vierundzwanzig.
+
+4
+00:00:36,190 --> 00:00:50,703
+X25519MLKEM768 ist jetzt die bevorzugteste TLS 1.3-Schlüsselaustauschgruppe — quantenresistente Handshakes ohne jede Konfiguration.
+
+5
+00:00:52,503 --> 00:01:02,544
+JDK 27 redigiert sensible Werte innerhalb der JVM. Ein in einem Startup-Event aufgezeichnetes Passwort erreicht nie die Aufnahmedatei.
+
+6
+00:01:04,344 --> 00:01:14,653
+LazyConstant ersetzt das Holder-Class-Idiom. Die Berechnung erfolgt höchstens einmal — und ein Fehler ist dauerhaft, Wiederholungen gehören also in den supplier.
+
+7
+00:01:16,453 --> 00:01:27,281
+Primitive Patterns konvertieren nur, wenn die Konvertierung exakt ist. Zweiundvierzig nimmt den int-Fall, fünf Milliarden fallen zu long, und null Komma eins zu double.
+
+8
+00:01:29,081 --> 00:01:39,055
+Ein Scope pro Anfrage, ein fork pro Remote-Aufruf. Der Scope ist die Abbruchgrenze — wenn etwas fehlschlägt, werden seine Geschwister abgebrochen.
+
+9
+00:01:40,855 --> 00:01:53,835
+Vier Bestellungen über drei Service-Aufrufe: fünfhundertsiebzig Millisekunden sequenziell, zweihundertachtundfünfzig strukturiert — etwa zwei Komma zwei Mal schneller, mit identischen Ergebnissen.
+
+10
+00:01:55,635 --> 00:02:03,995
+Ein Skalarprodukt mit der Vector API läuft etwa viermal schneller als die skalare Schleife und folgt den vier SIMD-Lanes nahezu exakt.
+
+11
+00:02:05,795 --> 00:02:14,152
+Die PEM API kodiert Schlüssel in einer Zeile — inklusive Verschlüsselung — und ersetzt jede selbstgebaute base64-Hülle.
+
+12
+00:02:15,952 --> 00:02:26,646
+Neun JEPs, dreiunddreißig Tests, echte Benchmarks auf JDK 27 Build fünfunddreißig. Der gesamte Code und alle Zahlen stehen im Repository.
+
+13
+00:02:28,446 --> 00:02:36,428
+Klone das Repository, führe die Tests aus und reproduziere jede Zahl auf deiner eigenen Hardware. Danke fürs Zuschauen.

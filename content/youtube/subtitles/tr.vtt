@@ -1,0 +1,40 @@
+WEBVTT
+
+00:00:00.400 --> 00:00:10.573
+JDK 27 ile dokuz JEP geldi. Her biri için çalıştırılabilir bir demo, bir test ve bir benchmark hazırladım. İşte ölçtükleri şeyler.
+
+00:00:12.373 --> 00:00:22.306
+G1 toplayıcısı artık tek bir CPU'da bile her ortamda ergonomik varsayılan. Küçük konteynerlerde sürpriz toplayıcı değişimleri yok.
+
+00:00:24.106 --> 00:00:33.901
+Nesne başlıkları doksan altı bitten altmış dört bite indi. İki int içeren bir record artık yirmi dört bayt yerine on altı bayt ayırıyor.
+
+00:00:35.701 --> 00:00:49.155
+X25519MLKEM768 artık en çok tercih edilen TLS 1.3 anahtar değişim grubu — sıfır yapılandırmayla kuantum dirençli el sıkışmalar.
+
+00:00:50.955 --> 00:01:00.652
+JDK 27 hassas değerleri JVM içinde gizler. Başlangıç olayına kaydedilen bir parola kayıt dosyasına asla ulaşmaz.
+
+00:01:02.452 --> 00:01:14.354
+Lazy constant holder class deyiminin yerini alır. Hesaplama en fazla bir kez yapılır — ve başarısızlık kalıcıdır, bu yüzden yeniden denemeler supplier'ın içinde olmalı.
+
+00:01:16.154 --> 00:01:26.171
+İlkel desenler yalnızca dönüşüm tam olduğunda dönüştürür. Kırk iki int dalına girer, beş milyar long'a düşer ve sıfır virgül bir double'a gider.
+
+00:01:27.971 --> 00:01:38.035
+İstek başına bir scope, uzak çağrı başına bir fork. Scope iptal sınırıdır — bir şey başarısız olduğunda kardeşleri de iptal edilir.
+
+00:01:39.835 --> 00:01:53.219
+Üç servis çağrısından geçen dört sipariş: sıralı olarak beş yüz yetmiş milisaniye, yapısal olarak iki yüz elli sekiz — yaklaşık iki virgül iki kat daha hızlı ve sonuçlar birebir aynı.
+
+00:01:55.019 --> 00:02:04.861
+Vector API ile bir iç çarpım, skaler döngüden yaklaşık dört kat daha hızlı çalışır ve dört SIMD hattını neredeyse tam olarak izler.
+
+00:02:06.661 --> 00:02:15.965
+PEM API anahtarları tek satırda kodlar — şifreleme dahil — ve elle yazılmış her base64 sarmalayıcıyı ortadan kaldırır.
+
+00:02:17.765 --> 00:02:26.629
+Dokuz JEP, otuz üç test, JDK 27 build otuz beş üzerinde gerçek benchmark'lar. Tüm kod ve sayılar depoda.
+
+00:02:28.429 --> 00:02:36.921
+Depoyu klonlayın, testleri çalıştırın ve her sayıyı kendi donanımınızda yeniden üretin. İzlediğiniz için teşekkürler.
