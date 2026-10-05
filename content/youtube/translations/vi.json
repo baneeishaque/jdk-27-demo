@@ -1,0 +1,54 @@
+{
+  "intro": {
+    "title": "Chín JEP. Một màn trình diễn.",
+    "narration": "JDK 27 mang đến chín JEP. Tôi đã xây dựng một demo chạy được, một bài kiểm thử và một benchmark cho từng JEP. Đây là những gì chúng đo lường."
+  },
+  "g1": {
+    "title": "G1 giờ là bộ thu gom mặc định ở mọi nơi",
+    "narration": "Bộ thu gom G1 giờ là mặc định thuận tiện trong mọi môi trường — ngay cả trên một CPU đơn. Không còn những thay đổi bộ thu gom bất ngờ trong các container nhỏ."
+  },
+  "headers": {
+    "title": "Object header gọn nhẹ, đã đo lường",
+    "narration": "Object header giảm từ chín mươi sáu bit xuống sáu mươi tư bit. Một record với hai int giờ chỉ cấp phát mười sáu byte thay vì hai mươi tư byte."
+  },
+  "tls": {
+    "title": "TLS hậu lượng tử mặc định",
+    "narration": "X25519MLKEM768 giờ là nhóm trao đổi khóa TLS 1.3 được ưu tiên nhất — bắt tay kháng lượng tử mà không cần cấu hình gì."
+  },
+  "jfr": {
+    "title": "JFR che giấu bí mật trước khi ghi đĩa",
+    "narration": "JDK 27 che giấu các giá trị nhạy cảm bên trong JVM. Mật khẩu ghi trong sự kiện khởi động không bao giờ lọt vào tệp ghi."
+  },
+  "lazy": {
+    "title": "Hằng lazy, tối đa một lần",
+    "narration": "Lazy constant thay thế idiom holder class. Việc tính toán diễn ra tối đa một lần — và thất bại là vĩnh viễn, nên việc thử lại phải nằm trong supplier."
+  },
+  "patterns": {
+    "title": "Pattern nguyên thủy, chính xác từ thiết kế",
+    "narration": "Pattern nguyên thủy chỉ chuyển đổi khi phép chuyển đổi chính xác. Bốn mươi hai rơi vào nhánh int, năm tỷ rơi xuống long, và không phẩy một vào double."
+  },
+  "scopes": {
+    "title": "Structured concurrency, cuối cùng đã đúng hình",
+    "narration": "Một scope cho mỗi yêu cầu, một fork cho mỗi lời gọi từ xa. Scope là ranh giới hủy — khi bất cứ thứ gì thất bại, các anh em của nó cũng bị hủy."
+  },
+  "orders": {
+    "title": "Pipeline đã đo lường",
+    "narration": "Bốn đơn hàng qua ba lời gọi dịch vụ: năm trăm bảy mươi mili-giây tuần tự, hai trăm năm mươi tám theo structured — nhanh hơn khoảng hai phẩy hai lần, kết quả giống hệt nhau."
+  },
+  "vector": {
+    "title": "Vector API: nhanh hơn bốn lần",
+    "narration": "Tích vô hướng với Vector API chạy nhanh hơn vòng lặp scalar khoảng bốn lần, bám sát gần như chính xác bốn làn SIMD."
+  },
+  "pem": {
+    "title": "Mã hóa PEM, một dòng mỗi khóa",
+    "narration": "PEM API mã hóa khóa trong một dòng — kể cả mã hóa — và xóa bỏ mọi wrapper base64 tự viết."
+  },
+  "results": {
+    "title": "Bằng chứng",
+    "narration": "Chín JEP, ba mươi ba bài kiểm thử, benchmark thực trên JDK 27 build ba mươi lăm. Toàn bộ mã và con số đều có trong repository."
+  },
+  "outro": {
+    "title": "Mã, kiểm thử, benchmark",
+    "narration": "Hãy clone repository, chạy các bài kiểm thử và tái tạo từng con số trên phần cứng của bạn. Cảm ơn đã theo dõi."
+  }
+}

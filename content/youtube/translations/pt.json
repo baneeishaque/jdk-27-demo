@@ -1,0 +1,54 @@
+{
+  "intro": {
+    "title": "Nove JEPs. Uma vitrine.",
+    "narration": "O JDK 27 trouxe nove JEPs. Criei uma demo executável, um teste e um benchmark para cada uma. Veja o que elas medem."
+  },
+  "g1": {
+    "title": "O G1 agora é o coletor padrão em todo lugar",
+    "narration": "O coletor G1 agora é o padrão ergonômico em todos os ambientes — até em uma única CPU. Chega de mudanças surpresa de coletor em contêineres pequenos."
+  },
+  "headers": {
+    "title": "Cabeçalhos de objeto compactos, medidos",
+    "narration": "Os cabeçalhos de objeto encolheram de noventa e seis bits para sessenta e quatro. Um record com dois int agora aloca dezesseis bytes em vez de vinte e quatro."
+  },
+  "tls": {
+    "title": "TLS pós-quântico por padrão",
+    "narration": "X25519MLKEM768 agora é o grupo de troca de chaves TLS 1.3 mais preferido — handshakes resistentes a quantum sem nenhuma configuração."
+  },
+  "jfr": {
+    "title": "O JFR oculta segredos antes do disco",
+    "narration": "O JDK 27 oculta valores sensíveis dentro da JVM. Uma senha registrada em um evento de inicialização nunca chega ao arquivo de gravação."
+  },
+  "lazy": {
+    "title": "Constantes lazy, no máximo uma vez",
+    "narration": "Lazy constant substitui o idioma da classe holder. O cálculo acontece no máximo uma vez — e a falha é permanente, então as tentativas devem ficar dentro do supplier."
+  },
+  "patterns": {
+    "title": "Padrões primitivos, exatos por design",
+    "narration": "Padrões primitivos convertem apenas quando a conversão é exata. Quarenta e dois entra no caso int, cinco bilhões caem no long, e zero vírgula um no double."
+  },
+  "scopes": {
+    "title": "Concorrência estruturada, finalmente bem moldada",
+    "narration": "Um scope por requisição, um fork por chamada remota. O scope é a fronteira de cancelamento — quando algo falha, seus irmãos são cancelados."
+  },
+  "orders": {
+    "title": "O pipeline medido",
+    "narration": "Quatro pedidos em três chamadas de serviço: quinhentos e setenta milissegundos sequencial, duzentos e cinquenta e oito estruturado — cerca de duas vírgula duas vezes mais rápido, com resultados idênticos."
+  },
+  "vector": {
+    "title": "Vector API: quatro vezes mais rápido",
+    "narration": "Um produto escalar com a Vector API roda cerca de quatro vezes mais rápido que o loop escalar, acompanhando quase exatamente as quatro lanes SIMD."
+  },
+  "pem": {
+    "title": "Codificações PEM, uma linha por chave",
+    "narration": "A PEM API codifica chaves em uma linha — incluindo criptografia — e elimina todo wrapper base64 feito à mão."
+  },
+  "results": {
+    "title": "As provas",
+    "narration": "Nove JEPs, trinta e três testes, benchmarks reais no JDK 27 build trinta e cinco. Todo o código e os números estão no repositório."
+  },
+  "outro": {
+    "title": "Código, testes, benchmarks",
+    "narration": "Clone o repositório, rode os testes e reproduza cada número no seu próprio hardware. Obrigado por assistir."
+  }
+}

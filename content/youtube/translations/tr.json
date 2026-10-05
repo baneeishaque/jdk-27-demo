@@ -1,0 +1,54 @@
+{
+  "intro": {
+    "title": "Dokuz JEP. Tek vitrin.",
+    "narration": "JDK 27 ile dokuz JEP geldi. Her biri için çalıştırılabilir bir demo, bir test ve bir benchmark hazırladım. İşte ölçtükleri şeyler."
+  },
+  "g1": {
+    "title": "G1 artık her yerde varsayılan toplayıcı",
+    "narration": "G1 toplayıcısı artık tek bir CPU'da bile her ortamda ergonomik varsayılan. Küçük konteynerlerde sürpriz toplayıcı değişimleri yok."
+  },
+  "headers": {
+    "title": "Kompakt nesne başlıkları, ölçüldü",
+    "narration": "Nesne başlıkları doksan altı bitten altmış dört bite indi. İki int içeren bir record artık yirmi dört bayt yerine on altı bayt ayırıyor."
+  },
+  "tls": {
+    "title": "Varsayılan olarak kuantum sonrası TLS",
+    "narration": "X25519MLKEM768 artık en çok tercih edilen TLS 1.3 anahtar değişim grubu — sıfır yapılandırmayla kuantum dirençli el sıkışmalar."
+  },
+  "jfr": {
+    "title": "JFR sırları diske yazmadan önce gizler",
+    "narration": "JDK 27 hassas değerleri JVM içinde gizler. Başlangıç olayına kaydedilen bir parola kayıt dosyasına asla ulaşmaz."
+  },
+  "lazy": {
+    "title": "Tembel sabitler, en fazla bir kez",
+    "narration": "Lazy constant holder class deyiminin yerini alır. Hesaplama en fazla bir kez yapılır — ve başarısızlık kalıcıdır, bu yüzden yeniden denemeler supplier'ın içinde olmalı."
+  },
+  "patterns": {
+    "title": "İlkel desenler, tasarım gereği tam",
+    "narration": "İlkel desenler yalnızca dönüşüm tam olduğunda dönüştürür. Kırk iki int dalına girer, beş milyar long'a düşer ve sıfır virgül bir double'a gider."
+  },
+  "scopes": {
+    "title": "Yapısal eşzamanlılık, sonunda doğru biçimde",
+    "narration": "İstek başına bir scope, uzak çağrı başına bir fork. Scope iptal sınırıdır — bir şey başarısız olduğunda kardeşleri de iptal edilir."
+  },
+  "orders": {
+    "title": "Ölçülen işlem hattı",
+    "narration": "Üç servis çağrısından geçen dört sipariş: sıralı olarak beş yüz yetmiş milisaniye, yapısal olarak iki yüz elli sekiz — yaklaşık iki virgül iki kat daha hızlı ve sonuçlar birebir aynı."
+  },
+  "vector": {
+    "title": "Vector API: dört kat daha hızlı",
+    "narration": "Vector API ile bir iç çarpım, skaler döngüden yaklaşık dört kat daha hızlı çalışır ve dört SIMD hattını neredeyse tam olarak izler."
+  },
+  "pem": {
+    "title": "PEM kodlamaları, anahtar başına tek satır",
+    "narration": "PEM API anahtarları tek satırda kodlar — şifreleme dahil — ve elle yazılmış her base64 sarmalayıcıyı ortadan kaldırır."
+  },
+  "results": {
+    "title": "Kanıtlar",
+    "narration": "Dokuz JEP, otuz üç test, JDK 27 build otuz beş üzerinde gerçek benchmark'lar. Tüm kod ve sayılar depoda."
+  },
+  "outro": {
+    "title": "Kod, testler, benchmark'lar",
+    "narration": "Depoyu klonlayın, testleri çalıştırın ve her sayıyı kendi donanımınızda yeniden üretin. İzlediğiniz için teşekkürler."
+  }
+}

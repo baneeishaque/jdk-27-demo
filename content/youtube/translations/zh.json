@@ -1,0 +1,54 @@
+{
+  "intro": {
+    "title": "九个 JEP，一场演示",
+    "narration": "JDK 27 带来了九个 JEP。我为每一个都构建了可运行的演示、测试和基准测试。下面来看看它们衡量了什么。"
+  },
+  "g1": {
+    "title": "G1 现已成为所有环境的默认收集器",
+    "narration": "G1 收集器现在在包括单 CPU 在内的所有环境中都是符合人体工学的默认选择。小型容器里再也不会出现收集器意外切换。"
+  },
+  "headers": {
+    "title": "紧凑对象头，实测数据",
+    "narration": "对象头从九十六位缩小到六十四位。包含两个 int 的 record 现在只分配十六字节，而不是二十四字节。"
+  },
+  "tls": {
+    "title": "默认启用后量子 TLS",
+    "narration": "X25519MLKEM768 现在是 TLS 1.3 最优先的密钥交换组——零配置即可实现抗量子握手。"
+  },
+  "jfr": {
+    "title": "JFR 落盘前先脱敏",
+    "narration": "JDK 27 会在 JVM 内部对敏感值脱敏。启动事件中记录的密码永远不会进入录制文件。"
+  },
+  "lazy": {
+    "title": "惰性常量，最多一次",
+    "narration": "Lazy constant 取代了 holder class 惯用法。计算最多只发生一次——而且失败是永久性的，所以重试逻辑应该放在 supplier 内部。"
+  },
+  "patterns": {
+    "title": "基本类型模式，精确设计",
+    "narration": "基本类型模式只有在转换精确时才会匹配。四十二进入 int 分支，五十亿落入 long，零点一进入 double。"
+  },
+  "scopes": {
+    "title": "结构化并发，终于形态正确",
+    "narration": "每个请求一个 scope，每个远程调用一个 fork。scope 就是取消边界——任何任务失败时，它的兄弟任务都会被取消。"
+  },
+  "orders": {
+    "title": "实测流水线",
+    "narration": "四个订单经过三次服务调用：顺序执行五百七十毫秒，结构化执行二百五十八毫秒——大约快二点二倍，结果完全一致。"
+  },
+  "vector": {
+    "title": "Vector API：快四倍",
+    "narration": "使用 Vector API 的点积比标量循环快约四倍，几乎精确跟上四条 SIMD 通道。"
+  },
+  "pem": {
+    "title": "PEM 编码，每个密钥一行",
+    "narration": "PEM API 把密钥编码成一行——包括加密——并彻底淘汰手写的 base64 包装器。"
+  },
+  "results": {
+    "title": "证据在此",
+    "narration": "九个 JEP，三十三个测试，在 JDK 27 build 35 上的真实基准测试。所有代码和数字都在仓库里。"
+  },
+  "outro": {
+    "title": "代码、测试、基准",
+    "narration": "克隆仓库，运行测试，在你自己的硬件上复现每一个数字。感谢观看。"
+  }
+}

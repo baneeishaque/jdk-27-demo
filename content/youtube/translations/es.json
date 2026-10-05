@@ -1,0 +1,54 @@
+{
+  "intro": {
+    "title": "Nueve JEPs. Una demostración.",
+    "narration": "JDK 27 incluyó nueve JEPs. Construí una demo ejecutable, un test y un benchmark para cada uno. Esto es lo que miden."
+  },
+  "g1": {
+    "title": "G1 ya es el recolector por defecto en todas partes",
+    "narration": "El recolector G1 ahora es el valor por defecto ergonómico en todos los entornos, incluso con una sola CPU. Se acabaron los cambios sorpresa de recolector en contenedores pequeños."
+  },
+  "headers": {
+    "title": "Cabeceras de objeto compactas, medidas",
+    "narration": "Las cabeceras de objeto se redujeron de noventa y seis bits a sesenta y cuatro. Un record de dos int ahora asigna dieciséis bytes en lugar de veinticuatro."
+  },
+  "tls": {
+    "title": "TLS post-cuántico por defecto",
+    "narration": "X25519MLKEM768 es ahora el grupo de intercambio de claves TLS 1.3 preferido — handshakes resistentes a la computación cuántica sin ninguna configuración."
+  },
+  "jfr": {
+    "title": "JFR redacta los secretos antes de escribir a disco",
+    "narration": "JDK 27 redacta los valores sensibles dentro de la JVM. Una contraseña registrada en un evento de arranque nunca llega al archivo de grabación."
+  },
+  "lazy": {
+    "title": "Constantes lazy, como máximo una vez",
+    "narration": "LazyConstant reemplaza el idioma de la clase holder. El cálculo ocurre como máximo una vez, y el fallo es permanente, así que los reintentos van dentro del supplier."
+  },
+  "patterns": {
+    "title": "Patrones primitivos, exactos por diseño",
+    "narration": "Los patrones primitivos solo convierten cuando la conversión es exacta. Cuarenta y dos toma el caso int, cinco mil millones cae a long, y cero coma uno a double."
+  },
+  "scopes": {
+    "title": "Concurrencia estructurada, por fin bien formada",
+    "narration": "Un scope por petición, un fork por llamada remota. El scope es la frontera de cancelación: cuando algo falla, sus hermanos se cancelan."
+  },
+  "orders": {
+    "title": "El pipeline medido",
+    "narration": "Cuatro pedidos a través de tres llamadas de servicio: quinientos setenta milisegundos secuencial, doscientos cincuenta y ocho estructurado — unas dos coma dos veces más rápido, con resultados idénticos."
+  },
+  "vector": {
+    "title": "Vector API: cuatro veces más rápido",
+    "narration": "Un producto escalar con la Vector API corre unas cuatro veces más rápido que el bucle escalar, siguiendo los cuatro carriles SIMD casi exactamente."
+  },
+  "pem": {
+    "title": "Codificaciones PEM, una línea por clave",
+    "narration": "La PEM API codifica claves en una línea, incluida la encriptación, y elimina todos los envoltorios de base64 hechos a mano."
+  },
+  "results": {
+    "title": "Las pruebas",
+    "narration": "Nueve JEPs, treinta y tres tests, benchmarks reales en JDK 27 build treinta y cinco. Todo el código y los números están en el repositorio."
+  },
+  "outro": {
+    "title": "Código, tests, benchmarks",
+    "narration": "Clona el repositorio, ejecuta los tests y reproduce cada número en tu propio hardware. Gracias por ver."
+  }
+}

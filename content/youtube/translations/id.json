@@ -1,0 +1,54 @@
+{
+  "intro": {
+    "title": "Sembilan JEP. Satu demonstrasi.",
+    "narration": "JDK 27 membawa sembilan JEP. Saya membuat demo yang bisa dijalankan, sebuah tes, dan sebuah benchmark untuk masing-masingnya. Inilah yang mereka ukur."
+  },
+  "g1": {
+    "title": "G1 kini jadi collector default di mana-mana",
+    "narration": "Collector G1 kini menjadi default ergonomis di setiap lingkungan — bahkan pada satu CPU. Tidak ada lagi perubahan collector yang mengejutkan di container kecil."
+  },
+  "headers": {
+    "title": "Object header ringkas, terukur",
+    "narration": "Object header menyusut dari sembilan puluh enam bit menjadi enam puluh empat. Record dengan dua int kini mengalokasikan enam belas byte, bukan dua puluh empat."
+  },
+  "tls": {
+    "title": "TLS pasca-kuantum secara default",
+    "narration": "X25519MLKEM768 kini menjadi grup pertukaran kunci TLS 1.3 yang paling diutamakan — handshake tahan kuantum tanpa konfigurasi apa pun."
+  },
+  "jfr": {
+    "title": "JFR menyunting rahasia sebelum ke disk",
+    "narration": "JDK 27 menyunting nilai sensitif di dalam JVM. Kata sandi yang terekam dalam startup event tidak pernah mencapai file rekaman."
+  },
+  "lazy": {
+    "title": "Konstanta lazy, paling banyak sekali",
+    "narration": "LazyConstant menggantikan idiom holder-class. Komputasi terjadi paling banyak sekali — dan kegagalan bersifat permanen, jadi percobaan ulang harus ada di dalam supplier."
+  },
+  "patterns": {
+    "title": "Pattern primitif, eksak secara desain",
+    "narration": "Pattern primitif hanya mengonversi bila konversinya eksak. Empat puluh dua masuk ke kasus int, lima miliar jatuh ke long, dan nol koma satu ke double."
+  },
+  "scopes": {
+    "title": "Structured concurrency, akhirnya tertata benar",
+    "narration": "Satu scope per permintaan, satu fork per panggilan jarak jauh. Scope adalah batas pembatalan — saat ada yang gagal, saudara-saudaranya dibatalkan."
+  },
+  "orders": {
+    "title": "Pipeline yang terukur",
+    "narration": "Empat pesanan melalui tiga panggilan layanan: lima ratus tujuh puluh milidetik secara sekuensial, dua ratus lima puluh delapan secara terstruktur — sekitar dua koma dua kali lebih cepat, dengan hasil identik."
+  },
+  "vector": {
+    "title": "Vector API: empat kali lebih cepat",
+    "narration": "Dot product dengan Vector API berjalan sekitar empat kali lebih cepat daripada loop skalar, mengikuti empat lane SIMD hampir persis."
+  },
+  "pem": {
+    "title": "Encoding PEM, satu baris per kunci",
+    "narration": "PEM API mengodekan kunci dalam satu baris — termasuk enkripsi — dan menghapus semua pembungkus base64 buatan sendiri."
+  },
+  "results": {
+    "title": "Buktinya",
+    "narration": "Sembilan JEP, tiga puluh tiga tes, benchmark nyata pada JDK 27 build tiga puluh lima. Semua kode dan angka ada di repositori."
+  },
+  "outro": {
+    "title": "Kode, tes, benchmark",
+    "narration": "Clone repositori, jalankan tes, dan reproduksi setiap angka di perangkat Anda sendiri. Terima kasih telah menonton."
+  }
+}

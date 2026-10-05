@@ -1,0 +1,54 @@
+{
+  "intro": {
+    "title": "Neuf JEPs. Une démonstration.",
+    "narration": "JDK 27 a livré neuf JEPs. J'ai construit une démo exécutable, un test et un benchmark pour chacun d'eux. Voici ce qu'ils mesurent."
+  },
+  "g1": {
+    "title": "G1 est désormais le collecteur par défaut partout",
+    "narration": "Le collecteur G1 est maintenant le défaut ergonomique dans tous les environnements, même sur un seul CPU. Fini les changements de collecteur surprises dans les petits conteneurs."
+  },
+  "headers": {
+    "title": "En-têtes d'objet compacts, mesurés",
+    "narration": "Les en-têtes d'objet sont passés de quatre-vingt-seize bits à soixante-quatre. Un record à deux int alloue désormais seize octets au lieu de vingt-quatre."
+  },
+  "tls": {
+    "title": "TLS post-quantique par défaut",
+    "narration": "X25519MLKEM768 est désormais le groupe d'échange de clés TLS 1.3 préféré — des handshakes résistants au quantique sans aucune configuration."
+  },
+  "jfr": {
+    "title": "JFR expurge les secrets avant l'écriture",
+    "narration": "JDK 27 expurge les valeurs sensibles à l'intérieur de la JVM. Un mot de passe enregistré dans un événement de démarrage n'atteint jamais le fichier d'enregistrement."
+  },
+  "lazy": {
+    "title": "Constantes lazy, au plus une fois",
+    "narration": "LazyConstant remplace l'idiome de la classe holder. Le calcul a lieu au plus une fois — et l'échec est permanent, donc les nouvelles tentatives vont dans le supplier."
+  },
+  "patterns": {
+    "title": "Patterns primitifs, exacts par conception",
+    "narration": "Les patterns primitifs ne convertissent que lorsque la conversion est exacte. Quarante-deux prend le cas int, cinq milliards tombe dans long, et zéro virgule un dans double."
+  },
+  "scopes": {
+    "title": "Concurrence structurée, enfin bien formée",
+    "narration": "Un scope par requête, un fork par appel distant. Le scope est la frontière d'annulation — quand quelque chose échoue, ses frères sont annulés."
+  },
+  "orders": {
+    "title": "Le pipeline mesuré",
+    "narration": "Quatre commandes via trois appels de service : cinq cent soixante-dix millisecondes en séquentiel, deux cent cinquante-huit en structuré — environ deux virgule deux fois plus rapide, avec des résultats identiques."
+  },
+  "vector": {
+    "title": "Vector API : quatre fois plus rapide",
+    "narration": "Un produit scalaire avec la Vector API s'exécute environ quatre fois plus vite que la boucle scalaire, suivant les quatre voies SIMD presque exactement."
+  },
+  "pem": {
+    "title": "Encodages PEM, une ligne par clé",
+    "narration": "La PEM API encode les clés sur une seule ligne — chiffrement inclus — et supprime tous les wrappers base64 faits maison."
+  },
+  "results": {
+    "title": "Les preuves",
+    "narration": "Neuf JEPs, trente-trois tests, de vrais benchmarks sur JDK 27 build trente-cinq. Tout le code et les chiffres sont dans le dépôt."
+  },
+  "outro": {
+    "title": "Code, tests, benchmarks",
+    "narration": "Clonez le dépôt, lancez les tests et reproduisez chaque chiffre sur votre propre matériel. Merci d'avoir regardé."
+  }
+}
